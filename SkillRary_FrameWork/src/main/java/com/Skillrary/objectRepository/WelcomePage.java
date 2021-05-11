@@ -13,7 +13,7 @@ public class WelcomePage {
 	@FindBy(linkText="Sign Up")
 	private WebElement signUpLink;
 	
-	@FindBy(linkText="Sign In")
+	@FindBy(xpath="//a[text()='Sign In']")
 	private WebElement signInLink;
 	
 	//getters method

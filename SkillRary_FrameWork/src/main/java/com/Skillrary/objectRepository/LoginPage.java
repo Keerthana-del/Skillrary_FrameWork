@@ -5,16 +5,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Skillrary.GenericUtils.WebDriverUtility;
+
 /**
  * This is the object repository for login page
  * @author Adarsh
  *
  */
 
-public class LoginPage {
+public class LoginPage extends WebDriverUtility{
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
 	
 	@FindBy(id="email")
 	private WebElement emailAddressTF;
@@ -22,7 +25,7 @@ public class LoginPage {
 	@FindBy(name="password")
 	private WebElement passwordTF;
 	
-	@FindBy(id="recaptcha-anchor")
+	@FindBy(xpath="//span[@id='recaptcha-anchor']")
 	private WebElement reCaptchaCheckbox;
 	
 	@FindBy(id="usertype_yes")
@@ -119,8 +122,9 @@ public class LoginPage {
 	 * @author Adarsh
 	 * @param username
 	 * @param password
+	 * @throws InterruptedException 
 	 */
-	public void login(String username,String password) {
+	public void login(String username,String password) throws InterruptedException {
 		emailAddressTF.sendKeys(username);
 		passwordTF.sendKeys(password);
 		reCaptchaCheckbox.click();

@@ -20,7 +20,6 @@ public class SearchCourseTest extends BaseClass {
 		//Verification steps
 		Assert.assertEquals(courseName, expectedCourseName);
 		
-		
 	}
 
 }

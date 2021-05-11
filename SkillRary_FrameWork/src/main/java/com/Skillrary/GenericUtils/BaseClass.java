@@ -19,6 +19,10 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.Skillrary.objectRepository.HomePage;
+import com.Skillrary.objectRepository.LoginPage;
+import com.Skillrary.objectRepository.WelcomePage;
+
 //import com.crm.vtiger.pomclass.HomePage;
 //import com.crm.vtiger.pomclass.LoginPage;
 
@@ -29,12 +33,12 @@ public class BaseClass {
 	public FileUtility fUtil=new FileUtility();
 	public WebDriverUtility wUtil=new WebDriverUtility();
 	public DataBaseUtilities dblib = new DataBaseUtilities();
-	public HomePage homePAge;
+	public HomePage homePage;
 	
 	@BeforeSuite(groups = {"smokeTest" , "regressionTest"})
 	public void configBS() throws Throwable {
 		//connect to DB
-		dblib.connectToDB();
+		//dblib.connectToDB();
 	}
 	
 	@BeforeTest(groups = {"smokeTest" , "regressionTest"})
@@ -49,6 +53,7 @@ public class BaseClass {
 		String browserName=fUtil.getPropertyKeyValue("browser");
 		
 		if(browserName.equalsIgnoreCase("firefox")) {
+			System.setProperty("Webdriver.chrome.driver", "./chromedriver.exe");
 			driver = new FirefoxDriver();
 		}
 		else if(browserName.equalsIgnoreCase("chrome")) {
@@ -58,7 +63,7 @@ public class BaseClass {
 			driver=new InternetExplorerDriver();
 		}
 		staticDriver=driver;
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 	
@@ -66,12 +71,14 @@ public class BaseClass {
 	@BeforeMethod(groups = {"smokeTest" , "regressionTest"})
 	public void configBM() throws Throwable {
 		String url=fUtil.getPropertyKeyValue("url");
-		String username=fUtil.getPropertyKeyValue("username");
+		String username=fUtil.getPropertyKeyValue("email_id");
 		String password=fUtil.getPropertyKeyValue("password");
 		driver.get(url);
 		//login to the application
+		WelcomePage welcomePage=new WelcomePage(driver);
+		welcomePage.clickOnSignIn();
 		LoginPage loginPage=new LoginPage(driver);
-		homePAge = loginPage.login(username, password);
+		loginPage.login(username, password);
 		
 	}
 	
@@ -79,8 +86,8 @@ public class BaseClass {
 	
 	@AfterMethod(groups = {"smokeTest" , "regressionTest"})
 	public void configAM() throws Throwable {
-		HomePage  homePage = new HomePage(driver);
-		homePage.signOut();
+		HomePage homepage=new HomePage();
+		homepage.logout();
 		
 	}
 	
@@ -99,7 +106,7 @@ public class BaseClass {
 	@AfterSuite(groups = {"smokeTest" , "regressionTest"})
 	public void configAS() throws Throwable {
 		// close DB connection
-		dblib.closeDb();
+		//dblib.closeDb();
 	}
 
 

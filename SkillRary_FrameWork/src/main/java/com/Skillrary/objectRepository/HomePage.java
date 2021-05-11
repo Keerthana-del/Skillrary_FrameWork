@@ -32,6 +32,15 @@ public class HomePage {
 	
 	@FindBy(linkText=" messages ")
 	private WebElement msg;
+	
+	@FindBy(linkText=" Logout")
+	private WebElement logoutLink;
+	
+	
+
+	public WebElement getLogoutLink() {
+		return logoutLink;
+	}
 
 	public WebElement getLogo() {
 		return logo;
@@ -94,6 +103,15 @@ public class HomePage {
 	{
 		profiledropdown.click();
 		msg.click();
+	}
+	/**
+	 * this method will perform logout operation
+	 * @author Adarsh
+	 */
+	public void logout() {
+		profiledropdown.click();
+		logoutLink.click();
+		
 	}
 
 }
