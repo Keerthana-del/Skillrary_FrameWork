@@ -35,11 +35,11 @@ public WebElement getEngineeringTutions() {
 	return engineeringTutions;
 }
 
-public void coursePage(String engineeringcategory)
+public String coursePage(String engineeringcategory)
 {
 	courseLink.click();
 	wUtil.SelectOption(engineeringTutions, engineeringcategory);
-	String text = textFuction.getText();
+	return textFuction.getText();
 }
 
 }
