@@ -30,10 +30,26 @@ public class CourseViewPage {
 	@FindBy(linkText="adddiscussions")
 	private WebElement adddiscussionLink;
 	
+	@FindBy(xpath="//a[@title='Course Information']")
+	private WebElement courseInfoIcon;
+	
+	@FindBy(id="infoModalLabel")
+	private WebElement infomationLabel;
+	
 	//getters methods
-
+	
+    
+	
 	public WebElement getStartLecture() {
 		return startLecture;
+	}
+
+	public WebElement getInfoBodyBox() {
+		return infomationLabel;
+	}
+
+	public WebElement getCourseInfoIcon() {
+		return courseInfoIcon;
 	}
 
 	public WebElement getDiscussionLink() {
@@ -58,7 +74,11 @@ public class CourseViewPage {
 	public void startcourse() {
 		startLecture.click();
 	}
-	
+	public String courseInfoClick() {
+		courseInfoIcon.click();
+		return infomationLabel.getText();
+		
+	}
 	
 	
 	

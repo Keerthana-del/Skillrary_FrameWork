@@ -56,7 +56,7 @@ public class MyCoursesPage {
 	@FindBy(id="all")
 	private WebElement loadAllLink;
 	
-	//@FindBy(xpath="//div[@id='AllLearningCourse']/descendant::a[text()=' Linux Training (TYSS)']")
+	
 
 
 	//getters methods
@@ -118,7 +118,7 @@ public class MyCoursesPage {
 	public String searchCourse(String coursename) {
 		searchBar.sendKeys(coursename);
 		searchIcon.click();	
-		String xpathExpression="//div[@id='AllLearningCourse']/descendant::a[contains(text()='"+coursename+"']";
+		String xpathExpression="//div[@id='AllLearningCourse']/descendant::a[contains(text(),'"+coursename+"')]";
 	    return driver.findElement(By.xpath(xpathExpression)).getText();
 	}
 	/**
