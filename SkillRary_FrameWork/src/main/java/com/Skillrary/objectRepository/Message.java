@@ -1,7 +1,9 @@
 package com.Skillrary.objectRepository;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * POM Class for handling Message section
@@ -9,6 +11,11 @@ import org.openqa.selenium.support.FindBy;
  *
  */
 public class Message {
+	
+	public Message(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
 	
 	@FindBy(xpath="//b[@class='caret']")
 	private WebElement profiledropdown;
@@ -34,14 +41,11 @@ public class Message {
 	@FindBy(xpath="//td[@class='td-clickable text-']")
 	private WebElement sentMsg;
 
-	public WebElement getSent() {
-		return sent;
-	}
-
-	public WebElement getSentMsg() {
-		return sentMsg;
-	}
-
+	/**
+	 * Getter Methods
+	 * @author SOUMYASANTA SAHOO
+	 * @return
+	 */
 	public WebElement getProfiledropdown() {
 		return profiledropdown;
 	}
@@ -66,21 +70,31 @@ public class Message {
 		return sendMsg;
 	}
 	
+	public WebElement getSent() {
+		return sent;
+	}
+
+	public WebElement getSentMsg() {
+		return sentMsg;
+	}
+	
 	/**
 	 * Business logic to compose a Message
+	 * @author SOUMYASANTA SAHOO
 	 */
-	public void composeMessage()
+	public void composeMessage(String sbjct, String mssg)
 	{
 		profiledropdown.click();
 		msg.click();
 		compose.click();
-		subject.sendKeys(null);
-		message.sendKeys(null);
+		subject.sendKeys(sbjct);
+		message.sendKeys(mssg);
 		sendMsg.click();
 	}
 	
 	/**
 	 * Business logic to verify composed message
+	 * @author SOUMYASANTA SAHOO
 	 * @return
 	 */
 	public String verifySentMsg()
