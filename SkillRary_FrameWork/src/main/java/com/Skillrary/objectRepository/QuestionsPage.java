@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Skillrary.GenericUtils.BaseClass;
 /*
+ * This is the object repository created for QuestionPage
  * author
  * @Keerthana C
  */
@@ -57,6 +58,15 @@ public class QuestionsPage extends BaseClass{
 		return submitBtn;
 	}
 	public void questionPage(String category,String subcategory,String question_title,String description)
+	/*
+	 * author 
+	 * @Keerthana
+	 * This method will click on Submitbutton and enter all the valid credentials to ask a query
+	 * return category
+	 * return subcategory
+	 * return question_title
+	 * return description
+	 */
 	{
 		submitQuestionBtn.click();
 		questionsTitleTf.sendKeys(question_title);

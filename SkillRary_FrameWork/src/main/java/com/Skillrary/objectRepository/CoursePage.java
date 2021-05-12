@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Skillrary.GenericUtils.BaseClass;
 /*
+ * This is the object repository created for CoursePage
  * author
  * @Keerthana C
  */
@@ -34,12 +35,28 @@ public class CoursePage extends BaseClass{
 	public WebElement getEngineeringTutions() {
 		return engineeringTutions;
 	}
+	
 
-	public String coursePage(String engineeringcategory)
+	public void coursePage(String engineeringcategory)
 	{
+		/*author
+		 * @Keerthana C
+		 * This method will click on course and navigate to engineering category
+		 * return engineeringcategory
+		 */
 		courseLink.click();
 		wUtil.SelectOption(engineeringTutions, engineeringcategory);
-		return textFuction.getText();
+		
 	}
-
+	
+	
+ public String textEn()
+ /*author
+  * @Keerthana C
+  * this method will return text of EngineeringTutionpage
+  * 
+  */
+ {
+	  return textFuction.getText();
+ }
 }
