@@ -14,8 +14,10 @@ import com.Skillrary.GenericUtils.WebDriverUtility;
  */
 
 public class LoginPage extends WebDriverUtility{
+	WebDriver driver;
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver=driver;
 	}
 	
 	
@@ -58,12 +60,29 @@ public class LoginPage extends WebDriverUtility{
 	@FindBy(linkText=" Sign Up")
 	private WebElement signUplink;
 	
+	@FindBy(xpath="//iframe[@title='reCAPTCHA']")
+	private WebElement iFrameName;
+	
+	@FindBy(linkText="X")
+	private WebElement closeCookies;
+	
+	
+	
 	
 	//getters methods
 	
 
+	
 	public WebElement getEmailAddressTF() {
 		return emailAddressTF;
+	}
+
+	public WebElement getiFrameName() {
+		return iFrameName;
+	}
+
+	public WebElement getCloseCookies() {
+		return closeCookies;
 	}
 
 	public WebElement getPasswordTF() {
@@ -125,9 +144,12 @@ public class LoginPage extends WebDriverUtility{
 	 * @throws InterruptedException 
 	 */
 	public void login(String username,String password) throws InterruptedException {
+		closeCookies.click();
 		emailAddressTF.sendKeys(username);
 		passwordTF.sendKeys(password);
+		switchFrame(driver,iFrameName );
 		reCaptchaCheckbox.click();
+		driver.switchTo().parentFrame();
 		submitButton.click();	
 	}
 }
