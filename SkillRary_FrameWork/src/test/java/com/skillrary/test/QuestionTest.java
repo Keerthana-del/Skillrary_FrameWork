@@ -10,13 +10,13 @@ public class QuestionTest extends BaseClass{
 public void questionTest() throws Throwable
 {
 	//Fetching data from Excel sheet
-	String category=eUtil.getExcelData("Sheet1", 1, 3);
-	String subcategory=eUtil.getExcelData("Sheet1", 1, 4);
-	String question_title=eUtil.getExcelData("Sheet1", 1, 5);
-	String description=eUtil.getExcelData("Sheet1", 1, 6);
+	String category=eUtil.getExcelData("smoke", 1, 2);
+	String subcategory=eUtil.getExcelData("smoke", 1, 3);
+	String question_title=eUtil.getExcelData("smoke", 1, 4);
+	String description=eUtil.getExcelData("smoke", 1, 5);
 	
 	//Navigate to QuestionPage
-	QuestionsPage qp=new QuestionsPage(driver);
-	qp.questionPage(category, subcategory, question_title, description);
+	QuestionsPage questionpage=new QuestionsPage(driver);
+	questionpage.questionPage(category, subcategory, question_title, description);
 }
 }

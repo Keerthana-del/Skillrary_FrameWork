@@ -22,11 +22,15 @@ public class CoursePage extends BaseClass{
 	private WebElement courseLink;
 	@FindBy(xpath="//span[.='Engineering Tutions']")
 	private WebElement engineeringTutions;
+	@FindBy(xpath="//a[.='Computer/Information Science']")
+	private WebElement computerScience;
 	@FindBy(xpath="//h2[.='engineering-tutions / computerinformation-science']")
 	private WebElement textFuction;
-
-
-	public WebElement getTextfuction() {
+	
+	public WebElement getComputerScience() {
+		return computerScience;
+	}
+	public WebElement getTextFuction() {
 		return textFuction;
 	}
 	public WebElement getCourseLink() {
@@ -37,15 +41,16 @@ public class CoursePage extends BaseClass{
 	}
 	
 
-	public void coursePage(String engineeringcategory)
+	public void coursePage()
 	{
 		/*author
 		 * @Keerthana C
-		 * This method will click on course and navigate to engineering category
-		 * return engineeringcategory
+		 * This method will  navigate to computer Science page
+		 * 
 		 */
 		courseLink.click();
-		wUtil.SelectOption(engineeringTutions, engineeringcategory);
+		engineeringTutions.click();
+		computerScience.click();
 		
 	}
 	
@@ -53,7 +58,7 @@ public class CoursePage extends BaseClass{
  public String textEn()
  /*author
   * @Keerthana C
-  * this method will return text of EngineeringTutionpage
+  * this method will return text of computer science page
   * 
   */
  {

@@ -12,17 +12,17 @@ public class CourseTest extends BaseClass {
 	public void course() throws Throwable
 	{
 		//Fetching data from Excel sheet
-		String expectedresult=eUtil.getExcelData("Sheet1", 3, 3);
-		String engineeringcategory=eUtil.getExcelData("Sheet1", 3, 2);
+		String expectedresult=eUtil.getExcelData("smoke", 3, 2);
 		
 		
-		//Navigate to engineering tution
-		CoursePage cp=new CoursePage(driver);
-		cp.coursePage(engineeringcategory);
+		//Navigate to computerscience page
+		CoursePage coursepage=new CoursePage(driver);
+		coursepage.coursePage();
+		
 		
 		
 		//verification
-		String text = cp.textEn();
+		String text = coursepage.textEn();
 		Assert.assertTrue(text.contains(expectedresult));
 	}
 }
