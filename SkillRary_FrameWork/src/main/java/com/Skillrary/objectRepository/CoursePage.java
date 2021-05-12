@@ -12,8 +12,10 @@ import com.Skillrary.GenericUtils.BaseClass;
  * @Keerthana C
  */
 public class CoursePage extends BaseClass{
+
 	public CoursePage(WebDriver driver)
 	{
+
 		PageFactory.initElements(driver, this);
 	}
 
@@ -26,7 +28,7 @@ public class CoursePage extends BaseClass{
 	private WebElement computerScience;
 	@FindBy(xpath="//h2[.='engineering-tutions / computerinformation-science']")
 	private WebElement textFuction;
-	
+
 	public WebElement getComputerScience() {
 		return computerScience;
 	}
@@ -39,29 +41,25 @@ public class CoursePage extends BaseClass{
 	public WebElement getEngineeringTutions() {
 		return engineeringTutions;
 	}
-	
+	/*author
+	 * @Keerthana C
+	 * This method will  navigate to computer Science page
+	 * 
+	 */
 
-	public void coursePage()
-	{
-		/*author
-		 * @Keerthana C
-		 * This method will  navigate to computer Science page
-		 * 
-		 */
+	public void coursePage() {
 		courseLink.click();
 		engineeringTutions.click();
 		computerScience.click();
-		
+
 	}
-	
-	
- public String textEn()
- /*author
-  * @Keerthana C
-  * this method will return text of computer science page
-  * 
-  */
- {
-	  return textFuction.getText();
- }
+
+	/*author
+	 * @Keerthana C
+	 * this method will return text of computer science page
+	 * 
+	 */
+	public String textEn() {
+		return textFuction.getText();
+	}
 }

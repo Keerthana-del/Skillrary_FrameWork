@@ -57,7 +57,6 @@ public class QuestionsPage extends BaseClass{
 	public WebElement getSubmitBtn() {
 		return submitBtn;
 	}
-	public void questionPage(String category,String subcategory,String question_title,String description)
 	/*
 	 * author 
 	 * @Keerthana
@@ -67,7 +66,7 @@ public class QuestionsPage extends BaseClass{
 	 * return question_title
 	 * return description
 	 */
-	{
+	public void questionPage(String category,String subcategory,String question_title,String description) {
 		submitQuestionBtn.click();
 		questionsTitleTf.sendKeys(question_title);
 		wUtil.SelectOption(questionsCategoryDd, category);
