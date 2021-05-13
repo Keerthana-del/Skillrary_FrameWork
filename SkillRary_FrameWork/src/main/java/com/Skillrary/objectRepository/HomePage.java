@@ -38,7 +38,7 @@ public class HomePage {
 	@FindBy(linkText="courses")
 	private WebElement courses;
 	
-	@FindBy(linkText="my course")
+	@FindBy(xpath="//a[text()='my course']")
 	private WebElement mycourses;
 	
 	@FindBy(xpath="//b[@class='caret']")

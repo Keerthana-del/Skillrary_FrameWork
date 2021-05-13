@@ -4,7 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/**
+ * This is object repository for welcome page
+ * @author asd
+ *
+ */
 public class WelcomePage {
 	public WelcomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -26,7 +30,7 @@ public class WelcomePage {
 		return signInLink;
 	}
 	/**
-	 * This is the method to click on 
+	 * This is the method to click on sign in link
 	 * @author Adarsh
 	 */
 	public void clickOnSignIn() {

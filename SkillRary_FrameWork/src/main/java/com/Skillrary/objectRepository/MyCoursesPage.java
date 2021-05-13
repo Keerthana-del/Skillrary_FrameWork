@@ -109,7 +109,7 @@ public class MyCoursesPage {
 	public WebElement getLoadAllLink() {
 		return loadAllLink;
 	}
-	
+	// business methods
 	/**
 	 * This method will search the course in mycourse page
 	 * @author Adarsh
@@ -127,7 +127,7 @@ public class MyCoursesPage {
 	 */
 	public void viewCourse(String coursename) {
 		loadAllLink.click();
-		String coursePath="//div[@id='AllLearningCourse']/descendant::a[contains(text()='"+coursename+"'";
+		String coursePath="//div[@id='AllLearningCourse']/descendant::a[contains(text(),'"+coursename+"')]";
 		driver.findElement(By.xpath(coursePath)).click();
 	}
 	/**
@@ -136,9 +136,6 @@ public class MyCoursesPage {
 	 */
 	public void wishListView() {
 		wishlistLink.click();
-		
-	}
-	public void allCourseView() {
 		
 	}
 
