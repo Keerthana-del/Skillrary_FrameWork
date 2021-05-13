@@ -33,8 +33,11 @@ public class CourseViewPage {
 	@FindBy(xpath="//a[@title='Course Information']")
 	private WebElement courseInfoIcon;
 	
-	@FindBy(id="infoModalLabel")
+	@FindBy(xpath="//div[@id='infomodel']/descendant::h4[@id='infoModalLabel']")
 	private WebElement infomationLabel;
+	
+	@FindBy(xpath="//div[@id='infomodel']/descendant::span[text()='×']")
+	private WebElement aboutCourseClosebutton;
 	
 	//getters methods
 	
@@ -42,6 +45,14 @@ public class CourseViewPage {
 	
 	public WebElement getStartLecture() {
 		return startLecture;
+	}
+
+	public WebElement getInfomationLabel() {
+		return infomationLabel;
+	}
+
+	public WebElement getAboutCourseClosebutton() {
+		return aboutCourseClosebutton;
 	}
 
 	public WebElement getInfoBodyBox() {
@@ -67,6 +78,8 @@ public class CourseViewPage {
 	public WebElement getAdddiscussionLink() {
 		return adddiscussionLink;
 	}
+	
+	// Business Methods
 	/**
 	 * this method will start the course
 	 * @author Adarsh
@@ -74,6 +87,11 @@ public class CourseViewPage {
 	public void startcourse() {
 		startLecture.click();
 	}
+	/**
+	 * this method will view course information 
+	 * @author Adarsh
+	 * @return
+	 */
 	public String courseInfoClick() {
 		courseInfoIcon.click();
 		return infomationLabel.getText();

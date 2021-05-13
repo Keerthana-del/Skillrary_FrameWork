@@ -17,7 +17,7 @@ public class SearchCourseTest extends BaseClass {
 	public void searchCourse() throws Throwable {
 		
 		//fetch the courseName from excel sheet
-		String courseName=eUtil.getExcelData("smoke", 5, 2);
+		String courseName=eUtil.getExcelData("Smoke", 5, 2);
 		
 		//navigate to my course page
 		HomePage homepage=new HomePage(driver);

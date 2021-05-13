@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.skillrary.test.SampleTest">
+      <class name="com.skillrary.test.CourseInformationTest">
         <methods>
           <include name="configAS"/>
           <include name="configBT"/>
@@ -11,11 +11,11 @@
           <include name="configBS"/>
           <include name="configBC"/>
           <include name="configAT"/>
-          <include name="demo"/>
+          <include name="courseInfo"/>
           <include name="configAM"/>
           <include name="configBM"/>
         </methods>
-      </class> <!-- com.skillrary.test.SampleTest -->
+      </class> <!-- com.skillrary.test.CourseInformationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

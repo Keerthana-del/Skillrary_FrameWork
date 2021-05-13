@@ -19,8 +19,8 @@ public class TakeRecordedCourseTest extends BaseClass{
 	public void takeCourse() throws Throwable {
 		
 		//fetch the data from excel sheet
-		String courseName=eUtil.getExcelData("smoke", 7, 2);
-		String expetedTitle=eUtil.getExcelData("smoke", 7, 3);
+		String courseName=eUtil.getExcelData("Smoke", 7, 2);
+		String expetedTitle=eUtil.getExcelData("Smoke", 7, 3);
 
 		//navigate to my course page
 		HomePage homepage=new HomePage(driver);
@@ -28,7 +28,6 @@ public class TakeRecordedCourseTest extends BaseClass{
 		
 		//select a course
 		MyCoursesPage myCoursesPage=new MyCoursesPage(driver);
-		myCoursesPage.getLoadAllLink().click();
 		myCoursesPage.viewCourse(courseName);
 		
 		//start the course
@@ -38,6 +37,7 @@ public class TakeRecordedCourseTest extends BaseClass{
 		//verification
 		TakeThisCoursePage takeThisCoursePage=new TakeThisCoursePage(driver);
 		String actualTitle=takeThisCoursePage.pageTitle();
+		takeThisCoursePage.backToCourse();
 		Assert.assertEquals(actualTitle, expetedTitle);
 		
 		
