@@ -10,6 +10,4 @@ public class SampleTest extends BaseClass {
 	public void demo() {
 		System.out.println("passed");
 	}
-	
-
 }

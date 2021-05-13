@@ -2,6 +2,7 @@ package com.Skillrary.objectRepository;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -52,8 +53,11 @@ public class HomePage {
 	@FindBy(linkText=" TAKE THIS COURSE ")
 	private WebElement enrol;
 	
-	@FindBy(linkText=" Logout")
+	@FindBy(xpath="//a[text()=' Logout']")
 	private WebElement logoutLink;
+	
+	@FindAll ({@FindBy(linkText="TALK TO OUR EXPERTS"),@FindBy(xpath="//a[text()='TALK TO OUR EXPERTS']")})
+	private WebElement talkToExpertsLink;
 	
 	/**
 	 * Getter Methods
@@ -158,6 +162,15 @@ public class HomePage {
 	public void logout() {
 		profiledropdown.click();
 		logoutLink.click();
+		
+	}
+	/**
+	 * method will navigate to instructor list page
+	 * @author Adarsh
+	 */
+	public void talkToExpert() {
+		logo.click();
+		talkToExpertsLink.click();	
 		
 	}
 

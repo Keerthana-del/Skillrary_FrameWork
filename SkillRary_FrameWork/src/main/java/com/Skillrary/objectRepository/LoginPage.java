@@ -42,7 +42,7 @@ public class LoginPage extends WebDriverUtility{
 	@FindBy(name="captcha_type")
 	private WebElement captchaTypeButton;
 	
-	@FindBy(xpath="//button[text()=' Submit ']")
+	@FindBy(xpath="//button[@type='submit']")
 	private WebElement submitButton;
 	
 	@FindBy(linkText="Forgot Password")
@@ -147,9 +147,10 @@ public class LoginPage extends WebDriverUtility{
 		closeCookies.click();
 		emailAddressTF.sendKeys(username);
 		passwordTF.sendKeys(password);
-		switchFrame(driver,iFrameName );
-		reCaptchaCheckbox.click();
-		driver.switchTo().parentFrame();
+		Thread.sleep(40000);
+//		switchFrame(driver,iFrameName );
+//		reCaptchaCheckbox.click();
+//		driver.switchTo().parentFrame();
 		submitButton.click();	
 	}
 }
