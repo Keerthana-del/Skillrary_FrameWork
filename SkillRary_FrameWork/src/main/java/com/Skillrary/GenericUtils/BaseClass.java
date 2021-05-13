@@ -86,7 +86,7 @@ public class BaseClass {
 	
 	@AfterMethod(groups = {"smokeTest" , "regressionTest"})
 	public void configAM() throws Throwable {
-		HomePage homepage=new HomePage();
+		HomePage homepage=new HomePage(driver);
 		homepage.logout();
 		
 	}

@@ -22,7 +22,7 @@ public class CourseInformationTest extends BaseClass{
 		String expetedLabel=eUtil.getExcelData("smoke", 9, 3);
 
 		//navigate to my course page
-		HomePage homepage=new HomePage();
+		HomePage homepage=new HomePage(driver);
 		homepage.clickOnMyCourses();
 
 		//select a course

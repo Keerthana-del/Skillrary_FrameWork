@@ -20,7 +20,7 @@ public class SearchCourseTest extends BaseClass {
 		String courseName=eUtil.getExcelData("smoke", 5, 2);
 		
 		//navigate to my course page
-		HomePage homepage=new HomePage();
+		HomePage homepage=new HomePage(driver);
 		homepage.clickOnMyCourses();
 		
 		//searching the course
