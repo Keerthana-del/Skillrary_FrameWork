@@ -54,7 +54,8 @@ public class CoursePage extends BaseClass{
 
 	}
 
-	/*author
+	/*
+	 * author
 	 * @Keerthana C
 	 * this method will return text of computer science page
 	 * 

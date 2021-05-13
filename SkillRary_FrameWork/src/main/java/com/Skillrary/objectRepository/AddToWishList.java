@@ -27,12 +27,21 @@ public class AddToWishList {
 	public WebElement getAddtowistlistLink() {
 		return addtowistlistLink;
 	}
+	/*
+	 * @author Keerthana C
+	 *  This method will navigate to addtowishlist
+	 * 
+	 */
 
 	public void addToWishList()
 	{
 		imgLink.click();
 		addtowistlistLink.click();
 	}
+	/*
+	 * @author Keerthana C
+	 * This method will return text addtowishlist page
+	 */
 
 	public String wishList()
 	{

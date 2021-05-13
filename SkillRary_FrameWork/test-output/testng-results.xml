@@ -2,69 +2,51 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50563" started-at="2021-05-12T12:17:09Z" finished-at="2021-05-12T12:18:00Z">
+  <suite name="Default suite" duration-ms="42046" started-at="2021-05-13T04:46:47Z" finished-at="2021-05-13T04:47:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50563" started-at="2021-05-12T12:17:09Z" finished-at="2021-05-12T12:18:00Z">
+    <test name="Default test" duration-ms="42046" started-at="2021-05-13T04:46:47Z" finished-at="2021-05-13T04:47:29Z">
       <class name="com.skillrary.test.CourseTest">
-        <test-method status="PASS" signature="configBS()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configBS" is-config="true" duration-ms="35" started-at="2021-05-12T17:47:09Z" finished-at="2021-05-12T17:47:09Z">
+        <test-method status="PASS" signature="configBS()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configBS" is-config="true" duration-ms="16" started-at="2021-05-13T10:16:47Z" finished-at="2021-05-13T10:16:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method status="PASS" signature="configBT()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configBT" is-config="true" duration-ms="1" started-at="2021-05-12T17:47:09Z" finished-at="2021-05-12T17:47:09Z">
+        <test-method status="PASS" signature="configBT()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configBT" is-config="true" duration-ms="0" started-at="2021-05-13T10:16:47Z" finished-at="2021-05-13T10:16:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBT -->
-        <test-method status="PASS" signature="configBC()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configBC" is-config="true" duration-ms="10754" started-at="2021-05-12T17:47:09Z" finished-at="2021-05-12T17:47:20Z">
+        <test-method status="PASS" signature="configBC()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configBC" is-config="true" duration-ms="7269" started-at="2021-05-13T10:16:47Z" finished-at="2021-05-13T10:16:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method status="PASS" signature="configBM()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configBM" is-config="true" duration-ms="11448" started-at="2021-05-12T17:47:20Z" finished-at="2021-05-12T17:47:32Z">
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configBM" is-config="true" duration-ms="9258" started-at="2021-05-13T10:16:54Z" finished-at="2021-05-13T10:17:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method status="FAIL" signature="course()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="course" duration-ms="28316" started-at="2021-05-12T17:47:32Z" finished-at="2021-05-12T17:48:00Z">
+        <test-method status="FAIL" signature="course()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="course" duration-ms="25373" started-at="2021-05-13T10:17:03Z" finished-at="2021-05-13T10:17:29Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[.='courses']"}
-  (Session info: chrome=90.0.4430.93)
+              <![CDATA[Cannot locate an element using xpath=//a[.='courses']
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-QU51HI3', ip: '10.249.90.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\KEERTH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52470}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5dfd1480e724ea7ff4ce209cd5772b4c
-*** Element info: {Using=xpath, value=//a[.='courses']}]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[.='courses']"}
-  (Session info: chrome=90.0.4430.93)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//a[.='courses']
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-QU51HI3', ip: '10.249.90.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\KEERTH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52470}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5dfd1480e724ea7ff4ce209cd5772b4c
-*** Element info: {Using=xpath, value=//a[.='courses']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy14.click(Unknown Source)
-	at com.Skillrary.objectRepository.CoursePage.coursePage(CoursePage.java:53)
-	at com.skillrary.test.CourseTest.course(CourseTest.java:20)
+	at com.Skillrary.objectRepository.CoursePage.coursePage(CoursePage.java:51)
+	at com.skillrary.test.CourseTest.course(CourseTest.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -95,12 +77,18 @@ Session ID: 5dfd1480e724ea7ff4ce209cd5772b4c
           <reporter-output>
           </reporter-output>
         </test-method> <!-- course -->
-        <test-method status="FAIL" signature="configAM()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configAM" is-config="true" duration-ms="0" started-at="2021-05-12T17:48:00Z" finished-at="2021-05-12T17:48:00Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="configAM()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configAM" is-config="true" duration-ms="0" started-at="2021-05-13T10:17:29Z" finished-at="2021-05-13T10:17:29Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+	The constructor HomePage() is undefined
+]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.Skillrary.objectRepository.HomePage.logout(HomePage.java:112)
-	at com.Skillrary.GenericUtils.BaseClass.configAM(BaseClass.java:90)
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+	The constructor HomePage() is undefined
+
+	at com.Skillrary.GenericUtils.BaseClass.configAM(BaseClass.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -129,19 +117,19 @@ Session ID: 5dfd1480e724ea7ff4ce209cd5772b4c
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method status="SKIP" signature="configAC()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configAC" is-config="true" duration-ms="0" started-at="2021-05-12T17:48:00Z" finished-at="2021-05-12T17:48:00Z">
+        <test-method status="SKIP" signature="configAC()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configAC" is-config="true" duration-ms="0" started-at="2021-05-13T10:17:29Z" finished-at="2021-05-13T10:17:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method status="SKIP" signature="configAT()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configAT" is-config="true" duration-ms="0" started-at="2021-05-12T17:48:00Z" finished-at="2021-05-12T17:48:00Z">
+        <test-method status="SKIP" signature="configAT()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configAT" is-config="true" duration-ms="0" started-at="2021-05-13T10:17:29Z" finished-at="2021-05-13T10:17:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAT -->
-        <test-method status="SKIP" signature="configAS()[pri:0, instance:com.skillrary.test.CourseTest@7d417077]" name="configAS" is-config="true" duration-ms="0" started-at="2021-05-12T17:48:00Z" finished-at="2021-05-12T17:48:00Z">
+        <test-method status="SKIP" signature="configAS()[pri:0, instance:com.skillrary.test.CourseTest@2d209079]" name="configAS" is-config="true" duration-ms="0" started-at="2021-05-13T10:17:29Z" finished-at="2021-05-13T10:17:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->

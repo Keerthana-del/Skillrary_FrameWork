@@ -78,6 +78,12 @@ public class QuestionsPage extends BaseClass{
 		submitBtn.click();
 
 	}
+	/*
+	 * author
+	 * @Keerthana C
+	 * This method will return text of question page
+	 * 
+	 */
 	public String questionsLink() {
 		return questionLink.getText();
 		

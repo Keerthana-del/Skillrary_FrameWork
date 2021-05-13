@@ -14,6 +14,7 @@ import com.Skillrary.objectRepository.QuestionsPage;
 public class QuestionTest extends BaseClass{
 	@Test
 	public void questionTest() throws Throwable  {
+		
 		//Fetching data from Excel sheet
 		String category=eUtil.getExcelData("smoke", 1, 2);
 		String subcategory=eUtil.getExcelData("smoke", 1, 3);
