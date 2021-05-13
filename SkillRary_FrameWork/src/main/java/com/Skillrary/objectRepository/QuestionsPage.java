@@ -33,9 +33,12 @@ public class QuestionsPage extends BaseClass{
 	private WebElement chooseFile;
 	@FindBy(xpath="//button[.='Submit Question']")
 	private WebElement submitBtn;
+    @FindBy(xpath="//h2[.='Questions']")
+    private WebElement questionLink;
 
-
-
+	public WebElement getQuestionLink() {
+		return questionLink;
+	}
 	public WebElement getSubmitQuestionBtn() {
 		return submitQuestionBtn;
 	}
@@ -74,5 +77,9 @@ public class QuestionsPage extends BaseClass{
 		DescriptionTf.sendKeys(description);
 		submitBtn.click();
 
+	}
+	public String questionsLink() {
+		return questionLink.getText();
+		
 	}
 }

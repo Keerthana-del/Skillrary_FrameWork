@@ -1,12 +1,13 @@
 package com.skillrary.test;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Skillrary.GenericUtils.BaseClass;
 import com.Skillrary.objectRepository.AddToWishList;
 import com.Skillrary.objectRepository.CoursePage;
 
-import junit.framework.Assert;
+
 /*
  * This class is used to navigate to wishlist and check whether the product is added or not
  * @author Keerthana C
@@ -28,7 +29,7 @@ public class AddToWishListTest extends BaseClass {
 				
 		//Verifiction
 				String actual = addtowishlist.wishList();
-				Assert.assertEquals(expectedresult, actual);
+				Assert.assertTrue(actual.contains(expectedresult));
 	}
 
 }

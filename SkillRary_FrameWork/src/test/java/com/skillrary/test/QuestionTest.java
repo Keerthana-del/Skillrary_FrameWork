@@ -2,6 +2,7 @@ package com.skillrary.test;
 
 
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Skillrary.GenericUtils.BaseClass;
@@ -18,9 +19,14 @@ public class QuestionTest extends BaseClass{
 		String subcategory=eUtil.getExcelData("smoke", 1, 3);
 		String question_title=eUtil.getExcelData("smoke", 1, 4);
 		String description=eUtil.getExcelData("smoke", 1, 5);
+		String expectedresult=eUtil.getExcelData("smoke", 1, 6);
 
 		//Navigate to QuestionPage
 		QuestionsPage questionpage=new QuestionsPage(driver);
 		questionpage.questionPage(category, subcategory, question_title, description);
+		
+		//Verification
+		String actual = questionpage.questionsLink();
+		Assert.assertTrue(actual.contains(expectedresult));
 	}
 }
