@@ -22,7 +22,7 @@ public class TakeCourseTest extends BaseClass {
 	@Test
 	public void takeSpecificCourse() throws Throwable
 	{
-		String expectedButton=eUtil.getExcelData("Sheet1", 13, 2);
+		String expectedButton=eUtil.getExcelData("Smoke", 13, 2);
 		TakeCourse takeCourse=new TakeCourse(driver);
 		String text=takeCourse.takeCourse();
 		Assert.assertEquals(expectedButton, text);

@@ -17,10 +17,10 @@ public class TakeCourse {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(linkText="courses")
+	@FindBy(xpath="//a[text()='courses']")
 	private WebElement courses;
 	
-	@FindBy(linkText="Linux for Cloud & DevOps Engin")
+	@FindBy(xpath="//a[text()='Linux for Cloud & DevOps Engin']")
 	private WebElement course;
 	
 	@FindBy(id="enroll_btn")

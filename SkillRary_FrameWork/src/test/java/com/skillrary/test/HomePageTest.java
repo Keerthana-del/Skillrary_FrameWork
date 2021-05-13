@@ -1,11 +1,11 @@
 package com.skillrary.test;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Skillrary.GenericUtils.BaseClass;
 import com.Skillrary.objectRepository.HomePage;
 
-import junit.framework.Assert;
 
 /**
  * This Class contains method to Handle Home Page

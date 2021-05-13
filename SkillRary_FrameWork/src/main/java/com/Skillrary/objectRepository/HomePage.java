@@ -29,7 +29,7 @@ public class HomePage {
 	@FindBy(xpath="//a[@class='dropdown-toggle']/../../..//input[@type='submit']")
 	private WebElement submit;
 	
-	@FindBy(linkText=" Core Java")
+	@FindBy(xpath="//a[text()=' Core Java']")
 	private WebElement searchedCourse;
 	
 	@FindBy(linkText=" Ask a Question ")
@@ -47,10 +47,10 @@ public class HomePage {
 	@FindBy(linkText=" messages ")
 	private WebElement msg;
 	
-	@FindBy(linkText="API Testing (Basics to Advance)")
+	@FindBy(xpath="//a[text()='API Testing (Basics to Advance)']")
 	private WebElement specificCourse;
 	
-	@FindBy(linkText=" TAKE THIS COURSE ")
+	@FindBy(xpath="//button[text()=' TAKE THIS COURSE ']")
 	private WebElement enrol;
 	
 	@FindBy(xpath="//a[text()=' Logout']")

@@ -5,12 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Skillrary.GenericUtils.WebDriverUtility;
+
 /**
  * POM Class for handling Message section
  * @author SOUMYASANTA SAHOO
  *
  */
-public class Message {
+public class Message extends WebDriverUtility{
 	
 	public Message(WebDriver driver)
 	{
@@ -20,7 +22,7 @@ public class Message {
 	@FindBy(xpath="//b[@class='caret']")
 	private WebElement profiledropdown;
 	
-	@FindBy(linkText=" messages ")
+	@FindBy(xpath="//a[text()=' messages ']")
 	private WebElement msg;
 	
 	@FindBy(xpath="//a[@id='composeMessage']")
@@ -29,7 +31,7 @@ public class Message {
 	@FindBy(xpath="//input[@class='form-control parsley-validated']")
 	private WebElement subject;
 	
-	@FindBy(id="tinymce")
+	@FindBy(xpath="//iframe[@id='message_ifr']")
 	private WebElement message;
 	
 	@FindBy(xpath="//button[@class='btn btn-primary btn-sm sendbtn']")
@@ -40,6 +42,8 @@ public class Message {
 	
 	@FindBy(xpath="//td[@class='td-clickable text-']")
 	private WebElement sentMsg;
+
+	private WebDriver driver;
 
 	/**
 	 * Getter Methods
@@ -81,6 +85,7 @@ public class Message {
 	/**
 	 * Business logic to compose a Message
 	 * @author SOUMYASANTA SAHOO
+	 * @param  
 	 */
 	public void composeMessage(String sbjct, String mssg)
 	{
@@ -88,7 +93,9 @@ public class Message {
 		msg.click();
 		compose.click();
 		subject.sendKeys(sbjct);
+		switchFrame(driver,"message_ifr");
 		message.sendKeys(mssg);
+		driver.switchTo().parentFrame();
 		sendMsg.click();
 	}
 	
