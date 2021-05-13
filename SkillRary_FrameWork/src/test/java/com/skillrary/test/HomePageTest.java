@@ -22,7 +22,7 @@ public class HomePageTest extends BaseClass {
 	@Test
 	public void takeCourseFromHomePage() throws Throwable
 	{
-		String expectedButton=eUtil.getExcelData("Sheet1", 1, 2);
+		String expectedButton=eUtil.getExcelData("Smoke", 13, 2);
 		HomePage homePage=new HomePage(driver);
 		homePage.clickOnLogo();
 		String text=homePage.enrollForCourse();

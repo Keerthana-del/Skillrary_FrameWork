@@ -22,9 +22,9 @@ public class MessagePageTest extends BaseClass {
 	@Test
 	public void verifyMessage() throws Throwable
 	{
-		String sbjct=eUtil.getExcelData("Sheet1", 3, 2) + JavaUtility.getRandomData();
-		String mssg=eUtil.getExcelData("Sheet1", 3, 3) + JavaUtility.getRandomData();
-		String expectedSubject=eUtil.getExcelData("Sheet1", 3, 4);
+		String sbjct=eUtil.getExcelData("Sheet1", 15, 2) + JavaUtility.getRandomData();
+		String mssg=eUtil.getExcelData("Sheet1", 15, 3) + JavaUtility.getRandomData();
+		String expectedSubject=eUtil.getExcelData("Sheet1", 15, 4);
 		
 		Message message=new Message(driver);
 		message.composeMessage(sbjct, mssg);
