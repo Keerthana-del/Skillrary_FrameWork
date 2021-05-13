@@ -1,7 +1,9 @@
 package com.Skillrary.objectRepository;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.Skillrary.GenericUtils.BaseClass;
 
@@ -12,11 +14,22 @@ import com.Skillrary.GenericUtils.BaseClass;
  */
 public class HomePage {
 	
+	public HomePage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
 	@FindBy(xpath="//img[@src='https://www.skillrary.com/uploads/images/f-sr-logo-195-50.png']")
 	private WebElement logo;
 	
 	@FindBy(xpath="//a[@class='dropdown-toggle']/../../..//input[@placeholder='Search for Courses']")
 	private WebElement search;
+	
+	@FindBy(xpath="//a[@class='dropdown-toggle']/../../..//input[@type='submit']")
+	private WebElement submit;
+	
+	@FindBy(linkText=" Core Java")
+	private WebElement searchedCourse;
 	
 	@FindBy(linkText=" Ask a Question ")
 	private WebElement question;
@@ -33,11 +46,20 @@ public class HomePage {
 	@FindBy(linkText=" messages ")
 	private WebElement msg;
 	
+	@FindBy(linkText="API Testing (Basics to Advance)")
+	private WebElement specificCourse;
+	
+	@FindBy(linkText=" TAKE THIS COURSE ")
+	private WebElement enrol;
+	
 	@FindBy(linkText=" Logout")
 	private WebElement logoutLink;
 	
-	
-
+	/**
+	 * Getter Methods
+	 * @author SOUMYASANTA SAHOO
+	 * @return
+	 */
 	public WebElement getLogoutLink() {
 		return logoutLink;
 	}
@@ -50,6 +72,14 @@ public class HomePage {
 		return search;
 	}
 	
+	public WebElement getSubmit() {
+		return submit;
+	}
+	
+	public WebElement getSearchedCourse() {
+		return searchedCourse;
+	}
+
 	public WebElement getQuestion() {
 		return question;
 	}
@@ -69,7 +99,15 @@ public class HomePage {
 	public WebElement getMsg() {
 		return msg;
 	}
-	
+
+	public WebElement getSpecificCourse() {
+		return specificCourse;
+	}
+
+	public WebElement getEnrol() {
+		return enrol;
+	}
+
 	/**
 	 * Business logic to handle Home Page
 	 * @author SOUMYASANTA SAHOO
@@ -79,9 +117,11 @@ public class HomePage {
 		logo.click();
 	}
 	
-	public void searchCourse()
+	public String searchCourse(String text)
 	{
-		search.click();
+		search.sendKeys(text);
+		submit.click();
+		return searchedCourse.getText();
 	}
 	
 	public void clickOnAskQuestion()
@@ -104,6 +144,13 @@ public class HomePage {
 		profiledropdown.click();
 		msg.click();
 	}
+	
+	public String enrollForCourse()
+	{
+		specificCourse.click();
+		return enrol.getText();
+	}
+	
 	/**
 	 * this method will perform logout operation
 	 * @author Adarsh
