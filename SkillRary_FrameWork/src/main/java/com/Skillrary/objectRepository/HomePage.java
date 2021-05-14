@@ -1,5 +1,8 @@
 package com.Skillrary.objectRepository;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -14,10 +17,11 @@ import com.Skillrary.GenericUtils.WebDriverUtility;
  *
  */
 public class HomePage extends WebDriverUtility {
-	
+	WebDriver driver;
 	public HomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
+		this.driver=driver;
 	}
 	
 	@FindBy(xpath="//img[@src='https://www.skillrary.com/uploads/images/f-sr-logo-195-50.png']")
@@ -56,6 +60,15 @@ public class HomePage extends WebDriverUtility {
 	@FindBy(xpath="//a[text()=' Logout']")
 	private WebElement logoutLink;
 	
+	@FindBy(xpath="//a[text()=' SERVICES ']")
+	private WebElement servicesLink;
+	
+	@FindBy(xpath="//a[text()=' GEARS ']")
+	private WebElement gearsLink;
+	
+	@FindBy(xpath="//a[text()=' SERVICES ']/ancestor::li[@class='dropdown open']/child::ul//a")
+	private List<WebElement> servicesDropDownLinks;
+	
 	@FindAll ({@FindBy(linkText="TALK TO OUR EXPERTS"),@FindBy(xpath="//a[text()='TALK TO OUR EXPERTS']")})
 	private WebElement talkToExpertsLink;
 	
@@ -64,8 +77,22 @@ public class HomePage extends WebDriverUtility {
 	 * @author SOUMYASANTA SAHOO
 	 * @return
 	 */
+	
+	
 	public WebElement getLogoutLink() {
 		return logoutLink;
+	}
+
+	public WebElement getServicesLink() {
+		return servicesLink;
+	}
+
+	public WebElement getGearsLink() {
+		return gearsLink;
+	}
+
+	public WebElement getTalkToExpertsLink() {
+		return talkToExpertsLink;
 	}
 
 	public WebElement getLogo() {
@@ -174,5 +201,29 @@ public class HomePage extends WebDriverUtility {
 		waitAndClick(talkToExpertsLink);	
 		
 	}
+	/**
+	 * method will fetch all services and it will naviagte
+	 * @author Adarsh
+	 * @param serviceName
+	 */
+	public void navToServices(String serviceName) {
+		servicesLink.click();
+		List<WebElement> list = driver.findElements(By.xpath("//a[text()=' SERVICES ']/ancestor::li[@class='dropdown open']/child::ul//a"));
+		for(WebElement ele:list) {
+			if(ele.getText().equalsIgnoreCase(serviceName)){
+				ele.click();
+				break;
+			}
+		}
+	}  
+	public String switchToServices(String partialWinTitle,String parentwinTitle) {
+		switchToWindow(driver, partialWinTitle);
+		String title=driver.getTitle();
+		driver.close();
+		switchToWindow(driver, parentwinTitle);
+		return title;
+		
+	}
+	
 
 }

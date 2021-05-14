@@ -12,7 +12,11 @@ import com.Skillrary.objectRepository.Message;
 import com.Skillrary.objectRepository.SentMessagePage;
 import com.Skillrary.objectRepository.SkillrarySRPage;
 
-
+/**
+ * Test script to talk with experts
+ * @author Adarsh
+ *
+ */
 @Listeners(com.Skillrary.GenericUtils.ListenerIMP.class)
 public class TalkToOurExpertsTest extends BaseClass {
 	@Test
