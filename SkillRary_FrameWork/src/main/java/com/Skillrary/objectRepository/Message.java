@@ -102,6 +102,21 @@ public class Message extends WebDriverUtility{
 	}
 	
 	/**
+	 * Buisness logic for talking to expert
+	 * @param subjects
+	 * @param messages
+	 */
+	public void talkToExpert(String subjects, String messages )
+	{
+		subject.sendKeys(subjects);
+		WebElement msgbox=driver.findElement(By.id("message_ifr"));
+		switchFrame(driver,msgbox);
+		message.sendKeys(messages);
+		driver.switchTo().parentFrame();
+		sendMsg.click();
+	}
+	
+	/**
 	 * Business logic to verify composed message
 	 * @author SOUMYASANTA SAHOO
 	 * @return
