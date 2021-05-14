@@ -22,16 +22,12 @@ public class CoursePage extends BaseClass{
 
 	@FindBy(xpath="//a[.='courses']")
 	private WebElement courseLink;
-	@FindBy(xpath="//span[.='Engineering Tutions']")
+	@FindBy(xpath="//span[text()='Engineering Tutions']")
 	private WebElement engineeringTutions;
-	@FindBy(xpath="//a[.='Computer/Information Science']")
-	private WebElement computerScience;
-	@FindBy(xpath="//h2[.='engineering-tutions / computerinformation-science']")
+	@FindBy(xpath="//h2[.='engineering-tutions']")
 	private WebElement textFuction;
-
-	public WebElement getComputerScience() {
-		return computerScience;
-	}
+	
+	
 	public WebElement getTextFuction() {
 		return textFuction;
 	}
@@ -49,9 +45,7 @@ public class CoursePage extends BaseClass{
 
 	public void coursePage() {
 		courseLink.click();
-		engineeringTutions.click();
-		computerScience.click();
-
+		engineeringTutions.click();	
 	}
 
 	/*

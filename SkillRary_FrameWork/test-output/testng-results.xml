@@ -1,93 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-14T12:33:53 IST" name="Default suite" finished-at="2021-05-14T12:35:08 IST" duration-ms="75265">
+  <suite name="Default suite" duration-ms="40316" started-at="2021-05-14T13:34:12Z" finished-at="2021-05-14T13:34:52Z">
     <groups>
     </groups>
-    <test started-at="2021-05-14T12:33:53 IST" name="Default test" finished-at="2021-05-14T12:35:08 IST" duration-ms="75265">
-      <class name="com.skillrary.test.HomePageTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:33:53 IST" name="configBS" finished-at="2021-05-14T12:33:53 IST" duration-ms="15" status="PASS">
+    <test name="Default test" duration-ms="40316" started-at="2021-05-14T13:34:12Z" finished-at="2021-05-14T13:34:52Z">
+      <class name="com.skillrary.test.ApptitudeTest">
+        <test-method status="PASS" signature="configBS()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBS" is-config="true" duration-ms="22" started-at="2021-05-14T19:04:12Z" finished-at="2021-05-14T19:04:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBT()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:33:54 IST" name="configBT" finished-at="2021-05-14T12:33:54 IST" duration-ms="1" status="PASS">
+        <test-method status="PASS" signature="configBT()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBT" is-config="true" duration-ms="0" started-at="2021-05-14T19:04:12Z" finished-at="2021-05-14T19:04:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBT -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:33:54 IST" name="configBC" finished-at="2021-05-14T12:34:02 IST" duration-ms="8248" status="PASS">
+        <test-method status="PASS" signature="configBC()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBC" is-config="true" duration-ms="3425" started-at="2021-05-14T19:04:12Z" finished-at="2021-05-14T19:04:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:34:02 IST" name="configBM" finished-at="2021-05-14T12:34:49 IST" duration-ms="46971" status="PASS">
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBM" is-config="true" duration-ms="30048" started-at="2021-05-14T19:04:16Z" finished-at="2021-05-14T19:04:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="takeCourseFromHomePage()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:34:49 IST" name="takeCourseFromHomePage" finished-at="2021-05-14T12:35:04 IST" duration-ms="14840" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [TAKE THIS COURSE] but found [Take paid course_Latest Live course]]]>
-            </message>
+        <test-method status="FAIL" signature="apptitudeTest()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="apptitudeTest" duration-ms="1125" started-at="2021-05-14T19:04:46Z" finished-at="2021-05-14T19:04:47Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [TAKE THIS COURSE] but found [Take paid course_Latest Live course]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.skillrary.test.HomePageTest.takeCourseFromHomePage(HomePageTest.java:31)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1507)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+              <![CDATA[java.lang.NullPointerException
+	at com.Skillrary.GenericUtils.ExcelUtility.getExcelData(ExcelUtility.java:31)
+	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- takeCourseFromHomePage -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:35:04 IST" name="configAM" finished-at="2021-05-14T12:35:06 IST" duration-ms="1422" status="PASS">
+        </test-method> <!-- apptitudeTest -->
+        <test-method status="PASS" signature="configAM()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAM" is-config="true" duration-ms="2584" started-at="2021-05-14T19:04:47Z" finished-at="2021-05-14T19:04:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:35:06 IST" name="configAC" finished-at="2021-05-14T12:35:08 IST" duration-ms="2270" status="PASS">
+        <test-method status="PASS" signature="configAC()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAC" is-config="true" duration-ms="2340" started-at="2021-05-14T19:04:50Z" finished-at="2021-05-14T19:04:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAT()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:35:08 IST" name="configAT" finished-at="2021-05-14T12:35:08 IST" duration-ms="0" status="PASS">
+        <test-method status="PASS" signature="configAT()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAT" is-config="true" duration-ms="0" started-at="2021-05-14T19:04:52Z" finished-at="2021-05-14T19:04:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAT -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.skillrary.test.HomePageTest@48aaecc3]" started-at="2021-05-14T12:35:09 IST" name="configAS" finished-at="2021-05-14T12:35:09 IST" duration-ms="0" status="PASS">
+        <test-method status="PASS" signature="configAS()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAS" is-config="true" duration-ms="1" started-at="2021-05-14T19:04:54Z" finished-at="2021-05-14T19:04:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.skillrary.test.HomePageTest -->
+      </class> <!-- com.skillrary.test.ApptitudeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

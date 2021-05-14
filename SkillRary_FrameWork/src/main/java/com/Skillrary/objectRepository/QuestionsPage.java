@@ -11,7 +11,7 @@ import com.Skillrary.GenericUtils.BaseClass;
  * author
  * @Keerthana C
  */
-public class QuestionsPage extends BaseClass{
+public class QuestionsPage extends BaseClass {
 
 
 	public QuestionsPage(WebDriver driver){
@@ -23,19 +23,22 @@ public class QuestionsPage extends BaseClass{
 	private WebElement submitQuestionBtn;
 	@FindBy(name="question_text")
 	private WebElement questionsTitleTf;
-	@FindBy(name="category_id")
+	@FindBy(xpath="//select[@id='category_id']")
 	private WebElement questionsCategoryDd;
 	@FindBy(name="sub_cat_id")
 	private WebElement subCategoryDd;
 	@FindBy(name="question_description")
 	private WebElement DescriptionTf;
-	@FindBy(name="luploaddoc")
-	private WebElement chooseFile;
+	@FindBy(xpath=" //a[.=' Ask a Question ']")
+	private WebElement askQuestionLink;
 	@FindBy(xpath="//button[.='Submit Question']")
 	private WebElement submitBtn;
     @FindBy(xpath="//h2[.='Questions']")
     private WebElement questionLink;
 
+	public WebElement getAskQuestionLink() {
+		return askQuestionLink;
+	}
 	public WebElement getQuestionLink() {
 		return questionLink;
 	}
@@ -54,9 +57,7 @@ public class QuestionsPage extends BaseClass{
 	public WebElement getDescriptionTf() {
 		return DescriptionTf;
 	}
-	public WebElement getChooseFile() {
-		return chooseFile;
-	}
+	
 	public WebElement getSubmitBtn() {
 		return submitBtn;
 	}
@@ -70,6 +71,7 @@ public class QuestionsPage extends BaseClass{
 	 * return description
 	 */
 	public void questionPage(String category,String subcategory,String question_title,String description) {
+		askQuestionLink.click();
 		submitQuestionBtn.click();
 		questionsTitleTf.sendKeys(question_title);
 		wUtil.SelectOption(questionsCategoryDd, category);
@@ -88,4 +90,5 @@ public class QuestionsPage extends BaseClass{
 		return questionLink.getText();
 		
 	}
+
 }

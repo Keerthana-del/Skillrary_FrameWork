@@ -19,8 +19,13 @@ public class AddToWishList {
 	private WebElement imgLink;
 	@FindBy(xpath="//span[.='Add To Wishlist']")
 	private WebElement addtowistlistLink;
-
-
+    @FindBy(xpath="//span[.='Wishlisted']")
+    private WebElement wishlistedLink;
+    
+	
+	public WebElement getWishlistedLink() {
+		return wishlistedLink;
+	}
 	public WebElement getImgLink() {
 		return imgLink;
 	}
@@ -37,6 +42,7 @@ public class AddToWishList {
 	{
 		imgLink.click();
 		addtowistlistLink.click();
+	
 	}
 	/*
 	 * @author Keerthana C
@@ -45,7 +51,6 @@ public class AddToWishList {
 
 	public String wishList()
 	{
-		return addtowistlistLink.getText();
+		return wishlistedLink.getText();
 	}
-
 }
