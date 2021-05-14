@@ -5,14 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Skillrary.GenericUtils.WebDriverUtility;
+
 /**
  * This is the object repository for courseView Page
  * @author Adarsh
  *
  */
-public class CourseViewPage {
+public class CourseViewPage extends WebDriverUtility{
+	WebDriver driver;
 	public CourseViewPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver=driver;
 	}
 	
 	@FindBy(xpath="//ul[@class='sectionul section-1611']/descendant::div[@id='6871']/following-sibling::div/a")
@@ -94,6 +98,7 @@ public class CourseViewPage {
 	 */
 	public String courseInfoClick() {
 		courseInfoIcon.click();
+		waitForElementVisibility(driver, infomationLabel);
 		return infomationLabel.getText();
 		
 	}

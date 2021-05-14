@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author Adarsh
  *
  */
+
 public class TakeThisCoursePage {
 	WebDriver driver;
 	public TakeThisCoursePage(WebDriver driver) {
