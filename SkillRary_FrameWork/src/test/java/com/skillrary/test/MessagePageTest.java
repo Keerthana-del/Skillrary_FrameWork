@@ -25,13 +25,16 @@ public class MessagePageTest extends BaseClass {
 	@Test
 	public void verifyMessage() throws Throwable
 	{
+		// Fetching Data from Excel Sheet
 		String sbjct=eUtil.getExcelData("Smoke", 15, 2) + JavaUtility.getRandomData();
 		String mssg=eUtil.getExcelData("Smoke", 15, 3) + JavaUtility.getRandomData();
 		String expectedSubject=eUtil.getExcelData("Smoke", 15, 4);
 		
+		//Navigate to Message Page & Compose Message
 		Message message=new Message(driver);
 		message.composeMessage(sbjct, mssg);
 		
+		//Verification
 		SentMessagePage sentMsg=new SentMessagePage(driver);
 		String text=sentMsg.verifySentMsg();
 		Assert.assertTrue(text.contains(expectedSubject));

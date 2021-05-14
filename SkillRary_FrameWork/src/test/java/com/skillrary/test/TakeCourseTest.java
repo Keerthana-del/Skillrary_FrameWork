@@ -24,9 +24,14 @@ public class TakeCourseTest extends BaseClass {
 	@Test
 	public void takeSpecificCourse() throws Throwable
 	{
+		//Fetching Data From Excel Sheet
 		String expectedButton=eUtil.getExcelData("Smoke", 13, 2);
+		
+		//Take Corse
 		TakeCourse takeCourse=new TakeCourse(driver);
 		String text=takeCourse.takeCourse();
+		
+		//Verification
 		Assert.assertEquals(expectedButton, text);
 	}
 }

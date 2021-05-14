@@ -24,9 +24,14 @@ public class HomePageTest extends BaseClass {
 	@Test
 	public void takeCourseFromHomePage() throws Throwable
 	{
+		//Fetching data from Excel sheet
 		String expectedButton=eUtil.getExcelData("Smoke", 13, 1);
+		
+		//navigate to Home Page
 		HomePage homePage=new HomePage(driver);
 		homePage.clickOnLogo();
+		
+		//Verification
 		String text=homePage.enrollForCourse();
 		Assert.assertEquals(expectedButton, text);
 	}

@@ -25,6 +25,8 @@ public class SearchCourse_Test extends BaseClass{
 		HomePage homepage=new HomePage(driver);
 		String text="Java";
 		String text1=homepage.searchCourse(text);
+		
+		//Verification
 		Assert.assertTrue(text1.contains(text));
 	}
 
