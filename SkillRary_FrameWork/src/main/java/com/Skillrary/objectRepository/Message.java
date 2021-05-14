@@ -1,5 +1,6 @@
 package com.Skillrary.objectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,11 @@ import com.Skillrary.GenericUtils.WebDriverUtility;
  */
 public class Message extends WebDriverUtility{
 	
+	WebDriver driver;
 	public Message(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
+		this.driver=driver;
 	}
 	
 	@FindBy(xpath="//b[@class='caret']")
@@ -31,7 +34,7 @@ public class Message extends WebDriverUtility{
 	@FindBy(xpath="//input[@class='form-control parsley-validated']")
 	private WebElement subject;
 	
-	@FindBy(xpath="//iframe[@id='message_ifr']")
+	@FindBy(xpath="//body[@id='tinymce']")
 	private WebElement message;
 	
 	@FindBy(xpath="//button[@class='btn btn-primary btn-sm sendbtn']")
@@ -42,8 +45,6 @@ public class Message extends WebDriverUtility{
 	
 	@FindBy(xpath="//td[@class='td-clickable text-']")
 	private WebElement sentMsg;
-
-	private WebDriver driver;
 
 	/**
 	 * Getter Methods
@@ -93,7 +94,8 @@ public class Message extends WebDriverUtility{
 		msg.click();
 		compose.click();
 		subject.sendKeys(sbjct);
-		switchFrame(driver,"message_ifr");
+		WebElement msgbox=driver.findElement(By.id("message_ifr"));
+		switchFrame(driver,msgbox);
 		message.sendKeys(mssg);
 		driver.switchTo().parentFrame();
 		sendMsg.click();

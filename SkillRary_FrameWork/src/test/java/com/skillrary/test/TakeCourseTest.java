@@ -1,5 +1,6 @@
 package com.skillrary.test;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Skillrary.GenericUtils.BaseClass;
@@ -12,6 +13,7 @@ import junit.framework.Assert;
  * @author SOUMYASANTA SAHOO
  *
  */
+@Listeners(com.Skillrary.GenericUtils.ListenerIMP.class)
 public class TakeCourseTest extends BaseClass {
 	
 	/**

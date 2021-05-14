@@ -1,17 +1,20 @@
 package com.skillrary.test;
 
 import org.junit.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Skillrary.GenericUtils.BaseClass;
 import com.Skillrary.GenericUtils.JavaUtility;
 import com.Skillrary.objectRepository.Message;
+import com.Skillrary.objectRepository.SentMessagePage;
 
 /**
  * This class contains method to handle Message Page
  * @author SOUMYASANTA SAHOO
  *
  */
+@Listeners(com.Skillrary.GenericUtils.ListenerIMP.class)
 public class MessagePageTest extends BaseClass {
 	
 	/**
@@ -29,7 +32,8 @@ public class MessagePageTest extends BaseClass {
 		Message message=new Message(driver);
 		message.composeMessage(sbjct, mssg);
 		
-		String text=message.verifySentMsg();
+		SentMessagePage sentMsg=new SentMessagePage(driver);
+		String text=sentMsg.verifySentMsg();
 		Assert.assertTrue(text.contains(expectedSubject));
 	}
 
