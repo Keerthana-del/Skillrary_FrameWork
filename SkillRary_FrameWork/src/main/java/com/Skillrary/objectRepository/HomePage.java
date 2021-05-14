@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.Skillrary.GenericUtils.BaseClass;
+import com.Skillrary.GenericUtils.WebDriverUtility;
 
 /**
  * POM Class for Home Page
  * @author SOUMYASANTA SAHOO
  *
  */
-public class HomePage {
+public class HomePage extends WebDriverUtility {
 	
 	public HomePage(WebDriver driver)
 	{
@@ -167,10 +167,11 @@ public class HomePage {
 	/**
 	 * method will navigate to instructor list page
 	 * @author Adarsh
+	 * @throws Throwable 
 	 */
-	public void talkToExpert() {
+	public void talkToExpert() throws Throwable {
 		logo.click();
-		talkToExpertsLink.click();	
+		waitAndClick(talkToExpertsLink);	
 		
 	}
 

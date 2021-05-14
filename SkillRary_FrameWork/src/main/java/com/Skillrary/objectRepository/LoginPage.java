@@ -66,6 +66,9 @@ public class LoginPage extends WebDriverUtility{
 	@FindBy(linkText="X")
 	private WebElement closeCookies;
 	
+	@FindBy(xpath="//button[text()='Accept']")
+	private WebElement acceptCookies;
+	
 	
 	
 	
@@ -144,7 +147,8 @@ public class LoginPage extends WebDriverUtility{
 	 * @throws InterruptedException 
 	 */
 	public void login(String username,String password) throws InterruptedException {
-		closeCookies.click();
+		//closeCookies.click();
+		acceptCookies.click();
 		emailAddressTF.sendKeys(username);
 		passwordTF.sendKeys(password);
 		Thread.sleep(30000);

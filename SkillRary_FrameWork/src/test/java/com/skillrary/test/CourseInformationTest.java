@@ -35,7 +35,7 @@ public class CourseInformationTest extends BaseClass{
 		CourseViewPage courseViewPage=new CourseViewPage(driver);
 		String actuallabel = courseViewPage.courseInfoClick();
 		courseViewPage.getAboutCourseClosebutton().click();
-		System.out.println(actuallabel);
+		
 		
 		//verification
 		Assert.assertEquals(expetedLabel, actuallabel);
