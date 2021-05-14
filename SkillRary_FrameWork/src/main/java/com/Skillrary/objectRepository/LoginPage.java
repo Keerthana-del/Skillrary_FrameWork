@@ -151,7 +151,7 @@ public class LoginPage extends WebDriverUtility{
 		acceptCookies.click();
 		emailAddressTF.sendKeys(username);
 		passwordTF.sendKeys(password);
-		Thread.sleep(30000);
+		Thread.sleep(20000);
 //		switchFrame(driver,iFrameName );
 //		reCaptchaCheckbox.click();
 //		driver.switchTo().parentFrame();

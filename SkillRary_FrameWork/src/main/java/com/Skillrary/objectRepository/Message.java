@@ -45,14 +45,23 @@ public class Message extends WebDriverUtility{
 	
 	@FindBy(xpath="//td[@class='td-clickable text-']")
 	private WebElement sentMsg;
+	
+	@FindBy(xpath="//div[@class='modal fade in']/descendant::button[text()='×']")
+	private WebElement composeMessageCloseICon;
 
 	/**
 	 * Getter Methods
 	 * @author SOUMYASANTA SAHOO
 	 * @return
 	 */
+	
+	
 	public WebElement getProfiledropdown() {
 		return profiledropdown;
+	}
+
+	public WebElement getComposeMessageCloseICon() {
+		return composeMessageCloseICon;
 	}
 
 	public WebElement getMsg() {
@@ -105,8 +114,9 @@ public class Message extends WebDriverUtility{
 	 * Buisness logic for talking to expert
 	 * @param subjects
 	 * @param messages
+	 * @throws Throwable 
 	 */
-	public void talkToExpert(String subjects, String messages )
+	public void talkToExpert(String subjects, String messages ) throws Throwable
 	{
 		subject.sendKeys(subjects);
 		WebElement msgbox=driver.findElement(By.id("message_ifr"));
@@ -114,16 +124,19 @@ public class Message extends WebDriverUtility{
 		message.sendKeys(messages);
 		driver.switchTo().parentFrame();
 		sendMsg.click();
+		waitAndClick(composeMessageCloseICon);
+		
 	}
 	
 	/**
 	 * Business logic to verify composed message
 	 * @author SOUMYASANTA SAHOO
 	 * @return
+	 * @throws Throwable 
 	 */
-	public String verifySentMsg()
+	public String verifySentMsg() throws Throwable
 	{
-		sent.click();
+		waitAndClick(sent);
 		return sentMsg.getText();
 	}
 
