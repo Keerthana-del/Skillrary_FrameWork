@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 14 19:04:12 IST 2021</td>
+<td>Started on:</td><td>Sat May 15 08:14:52 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40316 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91434 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,9 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.skillrary.test.ApptitudeTest.apptitudeTest()'><b>apptitudeTest</b><br>Test class: com.skillrary.test.ApptitudeTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.Skillrary.GenericUtils.ExcelUtility.getExcelData(ExcelUtility.java:31)
-	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:21)
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -103,10 +106,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2111882926", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2111882926'><pre>java.lang.NullPointerException
-	at com.Skillrary.GenericUtils.ExcelUtility.getExcelData(ExcelUtility.java:31)
-	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1409342262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1409342262'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -132,7 +138,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 </pre></div></td>
-<td>1</td>
+<td>34</td>
 <td>com.skillrary.test.ApptitudeTest@2752f6e2</td></tr>
 </table><p>
 </body>

@@ -2,33 +2,39 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40316" started-at="2021-05-14T13:34:12Z" finished-at="2021-05-14T13:34:52Z">
+  <suite name="Default suite" duration-ms="91434" started-at="2021-05-15T02:44:52Z" finished-at="2021-05-15T02:46:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40316" started-at="2021-05-14T13:34:12Z" finished-at="2021-05-14T13:34:52Z">
+    <test name="Default test" duration-ms="91434" started-at="2021-05-15T02:44:52Z" finished-at="2021-05-15T02:46:24Z">
       <class name="com.skillrary.test.ApptitudeTest">
-        <test-method status="PASS" signature="configBS()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBS" is-config="true" duration-ms="22" started-at="2021-05-14T19:04:12Z" finished-at="2021-05-14T19:04:12Z">
+        <test-method status="PASS" signature="configBS()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBS" is-config="true" duration-ms="16" started-at="2021-05-15T08:14:52Z" finished-at="2021-05-15T08:14:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method status="PASS" signature="configBT()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBT" is-config="true" duration-ms="0" started-at="2021-05-14T19:04:12Z" finished-at="2021-05-14T19:04:12Z">
+        <test-method status="PASS" signature="configBT()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBT" is-config="true" duration-ms="13" started-at="2021-05-15T08:14:53Z" finished-at="2021-05-15T08:14:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBT -->
-        <test-method status="PASS" signature="configBC()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBC" is-config="true" duration-ms="3425" started-at="2021-05-14T19:04:12Z" finished-at="2021-05-14T19:04:16Z">
+        <test-method status="PASS" signature="configBC()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBC" is-config="true" duration-ms="20907" started-at="2021-05-15T08:14:53Z" finished-at="2021-05-15T08:15:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method status="PASS" signature="configBM()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBM" is-config="true" duration-ms="30048" started-at="2021-05-14T19:04:16Z" finished-at="2021-05-14T19:04:46Z">
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configBM" is-config="true" duration-ms="32196" started-at="2021-05-15T08:15:14Z" finished-at="2021-05-15T08:15:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method status="FAIL" signature="apptitudeTest()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="apptitudeTest" duration-ms="1125" started-at="2021-05-14T19:04:46Z" finished-at="2021-05-14T19:04:47Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="apptitudeTest()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="apptitudeTest" duration-ms="34627" started-at="2021-05-15T08:15:46Z" finished-at="2021-05-15T08:16:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.Skillrary.GenericUtils.ExcelUtility.getExcelData(ExcelUtility.java:31)
-	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:21)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.skillrary.test.ApptitudeTest.apptitudeTest(ApptitudeTest.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -55,23 +61,23 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- apptitudeTest -->
-        <test-method status="PASS" signature="configAM()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAM" is-config="true" duration-ms="2584" started-at="2021-05-14T19:04:47Z" finished-at="2021-05-14T19:04:50Z">
+        <test-method status="PASS" signature="configAM()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAM" is-config="true" duration-ms="1119" started-at="2021-05-15T08:16:22Z" finished-at="2021-05-15T08:16:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method status="PASS" signature="configAC()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAC" is-config="true" duration-ms="2340" started-at="2021-05-14T19:04:50Z" finished-at="2021-05-14T19:04:52Z">
+        <test-method status="PASS" signature="configAC()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAC" is-config="true" duration-ms="833" started-at="2021-05-15T08:16:23Z" finished-at="2021-05-15T08:16:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method status="PASS" signature="configAT()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAT" is-config="true" duration-ms="0" started-at="2021-05-14T19:04:52Z" finished-at="2021-05-14T19:04:52Z">
+        <test-method status="PASS" signature="configAT()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAT" is-config="true" duration-ms="0" started-at="2021-05-15T08:16:24Z" finished-at="2021-05-15T08:16:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAT -->
-        <test-method status="PASS" signature="configAS()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAS" is-config="true" duration-ms="1" started-at="2021-05-14T19:04:54Z" finished-at="2021-05-14T19:04:54Z">
+        <test-method status="PASS" signature="configAS()[pri:0, instance:com.skillrary.test.ApptitudeTest@2752f6e2]" name="configAS" is-config="true" duration-ms="0" started-at="2021-05-15T08:16:25Z" finished-at="2021-05-15T08:16:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->

@@ -18,9 +18,11 @@ public class ApptitudeTest extends BaseClass{
 	@Test
 	public void apptitudeTest() throws Throwable
 	{
+		
 		//Fetching data from Excel sheet
 		String expectedresult=eUtil.getExcelData("Smoke",19,2);
 		System.out.println(expectedresult);
+		
 		//Navigate to mycourse wishlist page
 		ApptitudePage apptitudepage=new ApptitudePage(driver);
 		apptitudepage.aptitude();
